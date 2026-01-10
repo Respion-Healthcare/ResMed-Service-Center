@@ -1,11 +1,7 @@
-// app/contact/page.tsx
-import React from "react";
-
-export default function ContactPage() {
+export default function SleepTestPage() {
   return (
     <div>
-      <h1>Contact Us</h1>
-      <p>Reach out to us at contact@resmed.com or call 123-456-7890.</p>
+      <h1>Sleep Test</h1>
     </div>
   );
 }
