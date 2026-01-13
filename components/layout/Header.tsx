@@ -1,74 +1,109 @@
 'use client'
-import { useState } from 'react'
+
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, ChevronDown } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
+import { FaFacebookF, FaLinkedinIn, FaGoogle, FaInstagram } from 'react-icons/fa'
 
 const navItems = [
   { name: 'Home', href: '/' },
-  { 
-    name: 'Services', 
+  {
+    name: 'Services',
     href: '/services',
     subItems: [
       { name: 'Products', href: '/services/products' },
       { name: 'Rental', href: '/services/rental' },
       { name: 'Sleep Test', href: '/services/sleep-test' },
-    ]
+    ],
   },
   { name: 'Contact', href: '/contact' },
-  { name: 'About', href: '/about' },
   { name: 'Tutorials', href: '/tutorials' },
 ]
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const [showHeader, setShowHeader] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY && window.scrollY > 80) {
+        setShowHeader(false)
+      } else {
+        setShowHeader(true)
+      }
+      setLastScrollY(window.scrollY)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [lastScrollY])
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <Image 
-              src="/images/resmed.png" 
-              alt="ResMed Service Center" 
-              width={200} 
-              height={100}
-              className="h-20 w-auto"
-            />
-          </Link>
+    <header
+      className={`bg-[#f3f3f3] border-b fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
+        showHeader ? 'translate-y-0' : '-translate-y-full'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 py-3">
+        <div className="flex items-center justify-between">
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          {/* Logo + Text */}
+          <div className="flex flex-col">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/images/resmed.png"
+                alt="ResMed"
+                width={120}
+                height={36}
+                priority
+              />
+
+              <div className="h-8 w-[1.5px] bg-gray-400" />
+
+              {/* 🔥 Slightly bigger text */}
+              <div className="leading-tight">
+                <p className="font-bold text-gray-800 text-xl">
+                  Authorised
+                </p>
+                <p className="font-semibold text-gray-700 text-xl">
+                  Service Centre
+                </p>
+              </div>
+            </div>
+
+            <p className="-mt-4 text-blue-700 font-semibold text-lg">
+              Managed by Respion Healthcare
+            </p>
+          </div>
+
+          {/* Navigation */}
+          <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <div 
+              <div
                 key={item.name}
                 className="relative"
                 onMouseEnter={() => setActiveDropdown(item.name)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <Link 
+                <Link
                   href={item.href}
-                  className="flex items-center text-gray-700 hover:text-blue-600 
-                             font-medium transition-colors"
+                  className="flex items-center gap-1 font-bold text-[17px] text-gray-800 hover:underline underline-offset-4"
                 >
                   {item.name}
-                  {item.subItems && <ChevronDown className="ml-1 h-4 w-4" />}
+                  {item.subItems && <ChevronDown size={16} />}
                 </Link>
-                
-                {/* Dropdown */}
+
                 {item.subItems && activeDropdown === item.name && (
-                  <div className="absolute top-full left-0 bg-white shadow-lg 
-                                  rounded-md py-2 min-w-[180px]">
-                    {item.subItems.map((subItem) => (
+                  <div className="absolute top-full left-0 mt-2 bg-white shadow-md rounded-md min-w-[200px] border">
+                    {item.subItems.map((sub) => (
                       <Link
-                        key={subItem.name}
-                        href={subItem.href}
-                        className="block px-4 py-2 text-gray-700 
-                                   hover:bg-blue-50 hover:text-blue-600"
+                        key={sub.name}
+                        href={sub.href}
+                        className="block px-4 py-2 text-sm font-medium hover:bg-gray-100"
                       >
-                        {subItem.name}
+                        {sub.name}
                       </Link>
                     ))}
                   </div>
@@ -77,31 +112,16 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden p-2"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Social Icons */}
+          <div className="hidden md:flex items-center gap-5 text-gray-800">
+            <FaFacebookF size={16} className="cursor-pointer hover:text-black" />
+            <FaLinkedinIn size={16} className="cursor-pointer hover:text-black" />
+            <FaGoogle size={16} className="cursor-pointer hover:text-black" />
+            <FaInstagram size={16} className="cursor-pointer hover:text-black" />
+          </div>
+
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-white border-t">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="block px-4 py-3 text-gray-700 hover:bg-gray-50"
-              onClick={() => setIsOpen(false)}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </div>
-      )}
     </header>
   )
 }
