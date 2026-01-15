@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ChevronDown } from 'lucide-react'
@@ -22,7 +22,6 @@ const navItems = [
 ]
 
 export default function Header() {
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [showHeader, setShowHeader] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
 
@@ -49,7 +48,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
 
-          {/* Logo + Text */}
+          {/* LOGO */}
           <div className="flex flex-col">
             <div className="flex items-center gap-3">
               <Image
@@ -59,65 +58,71 @@ export default function Header() {
                 height={36}
                 priority
               />
-
-              <div className="h-8 w-[1.5px] bg-gray-400" />
-
-              {/* 🔥 Slightly bigger text */}
+              <div className="h-8 w-[1.5px] bg-black" />
               <div className="leading-tight">
-                <p className="font-bold text-gray-800 text-xl">
-                  Authorised
-                </p>
-                <p className="font-semibold text-gray-700 text-xl">
-                  Service Centre
-                </p>
+                <p className="font-bold text-black text-xl">Authorised</p>
+                <p className="font-semibold text-black text-xl">Service Centre</p>
               </div>
             </div>
-
-            <p className="-mt-4 text-blue-700 font-semibold text-lg">
+            <p className="-mt-4 text-black font-semibold text-lg">
               Managed by Respion Healthcare
             </p>
           </div>
 
-          {/* Navigation */}
+          {/* NAVIGATION */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <div
-                key={item.name}
-                className="relative"
-                onMouseEnter={() => setActiveDropdown(item.name)}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
+              <div key={item.name} className="relative group">
+
+                {/* Parent link */}
                 <Link
                   href={item.href}
-                  className="flex items-center gap-1 font-bold text-[17px] text-gray-800 hover:underline underline-offset-4"
+                  className="flex items-center gap-1 font-bold text-[17px] text-black hover:underline underline-offset-4"
                 >
                   {item.name}
                   {item.subItems && <ChevronDown size={16} />}
                 </Link>
 
-                {item.subItems && activeDropdown === item.name && (
-                  <div className="absolute top-full left-0 mt-2 bg-white shadow-md rounded-md min-w-[200px] border">
+                {/* Dropdown */}
+                {item.subItems && (
+                  <div
+                    className="
+                      absolute top-full left-0 mt-2
+                      min-w-[220px]
+                      bg-white border border-gray-300 rounded-lg shadow-xl
+                      opacity-0 invisible
+                      group-hover:opacity-100 group-hover:visible
+                      transition-all duration-200
+                      z-50
+                    "
+                  >
                     {item.subItems.map((sub) => (
                       <Link
                         key={sub.name}
                         href={sub.href}
-                        className="block px-4 py-2 text-sm font-medium hover:bg-gray-100"
+                        className="
+                          block px-5 py-3
+                          text-sm font-semibold
+                          text-black
+                          hover:bg-gray-100
+                        "
                       >
                         {sub.name}
                       </Link>
                     ))}
                   </div>
                 )}
+
               </div>
             ))}
           </nav>
 
-          {/* Social Icons */}
-          <div className="hidden md:flex items-center gap-5 text-gray-800">
-            <FaFacebookF size={16} className="cursor-pointer hover:text-black" />
-            <FaLinkedinIn size={16} className="cursor-pointer hover:text-black" />
-            <FaGoogle size={16} className="cursor-pointer hover:text-black" />
-            <FaInstagram size={16} className="cursor-pointer hover:text-black" />
+          {/* SOCIAL */}
+          <div className="hidden md:flex items-center gap-5 text-black">
+            <FaFacebookF className="hover:opacity-80 cursor-pointer" />
+            <FaLinkedinIn className="hover:opacity-80 cursor-pointer" />
+            <FaGoogle className="hover:opacity-80 cursor-pointer" />
+            <FaInstagram className="hover:opacity-80 cursor-pointer" />
           </div>
 
         </div>

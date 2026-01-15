@@ -1,27 +1,32 @@
-// app/rentals/page.tsx
 import React from "react";
 import Link from "next/link";
 import { CheckCircle, Clock } from "lucide-react";
 
 export default function RentalProductsPage() {
+  const whatsappLink =
+    "https://wa.me/919937144165?text=" +
+    encodeURIComponent(
+      "Hello, I need details about ResMed rental devices (CPAP / BiPAP / Ventilator)."
+    );
+
   return (
     <main className="bg-gray-50 text-gray-900">
       {/* Hero */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
-        <div className="container mx-auto px-4 max-w-5xl">
+        <div className="max-w-5xl mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             ResMed Rental Devices
           </h1>
           <p className="text-lg md:text-xl text-gray-200">
-            Short-term and long-term rental solutions for sleep and respiratory care,
-            backed by authorized ResMed service support.
+            Short-term and long-term rental solutions for sleep and respiratory
+            care, backed by authorized ResMed service support.
           </p>
         </div>
       </section>
 
       {/* Rental Products */}
       <section className="py-16">
-        <div className="container mx-auto px-4 max-w-5xl space-y-12">
+        <div className="max-w-5xl mx-auto px-4 space-y-12">
 
           {/* CPAP Rental */}
           <div className="bg-white rounded-2xl shadow-md p-8">
@@ -114,7 +119,7 @@ export default function RentalProductsPage() {
           {/* CTA */}
           <div className="text-center pt-8">
             <Link
-              href="https://wa.me/917735812597?text=Hello%20I%20need%20ResMed%20rental%20device%20details"
+              href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-green-500 hover:bg-green-600
@@ -124,6 +129,7 @@ export default function RentalProductsPage() {
               Enquire About Rentals on WhatsApp
             </Link>
           </div>
+
         </div>
       </section>
     </main>

@@ -1,4 +1,3 @@
-// app/sleep-test/page.tsx
 import React from "react";
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
@@ -12,54 +11,67 @@ export default function SleepTestPage() {
   const sleepTests: TestService[] = [
     {
       name: "Polysomnography (PSG)",
-      description: "Comprehensive overnight sleep study to diagnose sleep disorders such as sleep apnea, insomnia, and restless legs syndrome."
+      description:
+        "Comprehensive overnight sleep study to diagnose sleep disorders such as sleep apnea, insomnia, and restless legs syndrome.",
     },
     {
       name: "Home Sleep Apnea Test (HSAT)",
-      description: "Simple, at-home diagnostic test for detecting obstructive sleep apnea in adults."
+      description:
+        "Simple, at-home diagnostic test for detecting obstructive sleep apnea in adults.",
     },
     {
       name: "CPAP Titration Study",
-      description: "Overnight study to determine the optimal CPAP pressure settings for effective therapy."
+      description:
+        "Overnight study to determine the optimal CPAP pressure settings for effective therapy.",
     },
     {
       name: "Multiple Sleep Latency Test (MSLT)",
-      description: "Daytime test to measure excessive daytime sleepiness and evaluate narcolepsy."
+      description:
+        "Daytime test to measure excessive daytime sleepiness and evaluate narcolepsy.",
     },
     {
       name: "Maintenance of Wakefulness Test (MWT)",
-      description: "Assesses your ability to stay awake during the day under supervised conditions."
+      description:
+        "Assesses your ability to stay awake during the day under supervised conditions.",
     },
   ];
+
+  const whatsappBase = "https://wa.me/919937144165?text=";
 
   return (
     <main className="bg-gray-50 text-gray-900">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
-        <div className="container mx-auto px-4 max-w-5xl text-center">
+        <div className="max-w-5xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Sleep Test Services
           </h1>
           <p className="text-lg md:text-xl text-gray-200">
-            Authorized ResMed Service Center offering professional sleep diagnostic studies to detect and manage sleep disorders.
+            Authorized ResMed Service Center offering professional sleep
+            diagnostic studies to detect and manage sleep disorders.
           </p>
         </div>
       </section>
 
-      {/* Sleep Test Services Section */}
+      {/* Sleep Test Services */}
       <section className="py-16">
-        <div className="container mx-auto px-4 max-w-5xl space-y-12">
+        <div className="max-w-5xl mx-auto px-4 space-y-12">
           {sleepTests.map((test) => (
-            <div key={test.name} className="bg-white rounded-2xl shadow-md p-8 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+            <div
+              key={test.name}
+              className="bg-white rounded-2xl shadow-md p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+            >
               <div>
                 <p className="font-semibold text-xl">{test.name}</p>
                 <p className="text-gray-700">{test.description}</p>
               </div>
               <Link
-                href={`https://wa.me/917735812597?text=Hello%20I%20want%20to%20book%20a%20${encodeURIComponent(test.name)}`}
+                href={`${whatsappBase}${encodeURIComponent(
+                  `Hello, I want to book a ${test.name}`
+                )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-blue-700 font-semibold hover:underline mt-2 md:mt-0"
+                className="inline-flex items-center text-blue-700 font-semibold hover:underline"
               >
                 Book via WhatsApp
                 <CheckCircle className="ml-2" size={18} />
@@ -70,7 +82,7 @@ export default function SleepTestPage() {
           {/* CTA */}
           <div className="text-center pt-8">
             <Link
-              href="https://wa.me/917735812597"
+              href="https://wa.me/919937144165"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-green-500 hover:bg-green-600

@@ -1,4 +1,3 @@
-// app/services/page.tsx
 import React from "react";
 import { CheckCircle } from "lucide-react";
 
@@ -50,26 +49,27 @@ export default function ServicesPage() {
     <main className="bg-gray-50 text-gray-900">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
-        <div className="container mx-auto px-4 max-w-5xl text-center">
+        <div className="max-w-5xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Our Services
           </h1>
           <p className="text-lg md:text-xl text-gray-200">
-            Comprehensive ResMed service solutions for CPAP, BiPAP, ventilators, accessories, and sleep test support.
+            Comprehensive ResMed service solutions for CPAP, BiPAP, ventilators,
+            accessories, and sleep test support.
           </p>
         </div>
       </section>
 
       {/* Services List */}
       <section className="py-16">
-        <div className="container mx-auto px-4 max-w-5xl grid gap-8 md:grid-cols-2">
+        <div className="max-w-5xl mx-auto px-4 grid gap-8 md:grid-cols-2">
           {servicesData.map((service) => (
             <div
               key={service.title}
               className="bg-white rounded-2xl shadow-md p-8 flex flex-col gap-4"
             >
               <div className="flex items-center gap-3">
-                <CheckCircle className="text-green-600" size={24} />
+                <CheckCircle className="text-green-600 shrink-0" size={24} />
                 <h2 className="text-xl font-semibold text-gray-800">
                   {service.title}
                 </h2>
@@ -82,7 +82,7 @@ export default function ServicesPage() {
         {/* CTA */}
         <div className="text-center pt-12">
           <a
-            href="https://wa.me/917735812597"
+            href="https://wa.me/919937144165"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-green-500 hover:bg-green-600

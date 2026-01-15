@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -15,21 +17,26 @@ export default function Hero() {
             </h1>
 
             <p className="text-lg text-white/90 mb-8 max-w-xl">
-              If you are looking for a trusted ResMed Service Center in Odisha, West Bengal,
-              this is the right place for you. We’re Respion Healthcare — an
-              Authorised ResMed Service Center and Sales Partner Odisha.
+              If you are looking for a trusted ResMed Service Center in Odisha,
+              West Bengal, this is the right place for you. We’re Respion
+              Healthcare — an Authorised ResMed Service Center and Sales Partner
+              in Odisha.
             </p>
 
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4">
+              {/* WhatsApp Button */}
               <Link
-                href="https://wa.me/917735812597"
+                href="https://wa.me/919937144165"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white text-[#9E1B4F] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
               >
-                Whatsapp
+                WhatsApp
               </Link>
 
+              {/* Call Button */}
               <Link
-                href="tel:+917735812597"
+                href="tel:+919937144165"
                 className="bg-white text-[#9E1B4F] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
               >
                 Call
@@ -37,11 +44,11 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Image (EXTERNAL HQ IMAGE) */}
+          {/* Right Image */}
           <div className="flex justify-center md:justify-end">
             <Image
               src="https://mlbdoiypvhyg.i.optimole.com/w:1080/h:1080/q:mauto/g:sm/f:best/ig:avif/dpr:2/https://resmedservicecenter.com/wp-content/uploads/2025/12/as1111.png"
-              alt="ResMed Device"
+              alt="ResMed CPAP / BiPAP Device"
               width={520}
               height={300}
               priority

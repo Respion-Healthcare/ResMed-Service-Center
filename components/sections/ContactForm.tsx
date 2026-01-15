@@ -10,6 +10,8 @@ const ContactSection: React.FC = () => {
     message: "",
   });
 
+  const [submitted, setSubmitted] = useState(false);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -18,8 +20,10 @@ const ContactSection: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Thank you! We will contact you soon.");
+    setSubmitted(true);
     setFormData({ name: "", email: "", message: "" });
+
+    setTimeout(() => setSubmitted(false), 4000);
   };
 
   return (
@@ -44,7 +48,14 @@ const ContactSection: React.FC = () => {
               surrounding areas.
             </p>
 
-            <button className="bg-blue-700 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-800 transition">
+            <button
+              onClick={() =>
+                document
+                  .getElementById("contact-form")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="bg-blue-700 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-800 transition"
+            >
               Contact Us
             </button>
           </div>
@@ -60,90 +71,95 @@ const ContactSection: React.FC = () => {
           </div>
         </div>
 
-       {/* 🔹 BOTTOM SECTION */}
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
+        {/* 🔹 BOTTOM SECTION */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
 
-  {/* MAP */}
-  <div className="bg-gray-50 rounded-3xl overflow-hidden shadow-sm">
-    <iframe
-      title="Respion Healthcare"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29938.346641839362!2d85.83669662475586!3d20.28812216681011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190be0e70177ad%3A0xc7c009fee67f805a!2sRespion%20Healthcare%20Pvt%20Ltd%20%2C%20Bhubaneswar%20-%20Oxygen%20Concentrator%20%2C%20Resmed%20Auto%20CPAP%20%2C%20BiPAP%20%2C%20Home%20Sleep%20Study!5e0!3m2!1sen!2sin!4v1768299496803!5m2!1sen!2sin"
-      className="w-full h-full border-0 min-h-[480px]"
-      allowFullScreen
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-    />
-  </div>
+          {/* MAP */}
+          <div className="bg-gray-50 rounded-3xl overflow-hidden shadow-sm">
+            <iframe
+              title="Respion Healthcare"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29938.346641839362!2d85.83669662475586!3d20.28812216681011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190be0e70177ad%3A0xc7c009fee67f805a!2sRespion%20Healthcare%20Pvt%20Ltd%20%2C%20Bhubaneswar%20-%20Oxygen%20Concentrator%20%2C%20Resmed%20Auto%20CPAP%20%2C%20BiPAP%20%2C%20Home%20Sleep%20Study!5e0!3m2!1sen!2sin!4v1768299496803!5m2!1sen!2sin"
+              className="w-full h-full border-0 min-h-[480px]"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
 
-  {/* CONTACT FORM */}
-  <form
-    onSubmit={handleSubmit}
-    className="relative bg-gray-100/90 backdrop-blur-md p-12 rounded-3xl shadow-xl space-y-10 flex flex-col justify-between min-h-[480px]"
-  >
-    <h3 className="text-3xl font-extrabold text-gray-900 text-center mb-6">
-      Get in Touch
-    </h3>
+          {/* CONTACT FORM */}
+          <form
+            id="contact-form"
+            onSubmit={handleSubmit}
+            className="relative bg-gray-100/90 backdrop-blur-md p-12 rounded-3xl shadow-xl space-y-10 flex flex-col justify-between min-h-[480px]"
+          >
+            <h3 className="text-3xl font-extrabold text-gray-900 text-center">
+              Get in Touch
+            </h3>
 
-    <div className="space-y-6">
-      {/* Name Field */}
-      <div className="relative">
-        <input
-          type="text"
-          name="name"
-          required
-          value={formData.name}
-          onChange={handleChange}
-          className="peer w-full bg-transparent text-gray-900 border-b-2 border-gray-300 placeholder-transparent py-3 px-0 focus:border-blue-500 focus:outline-none transition-all"
-          placeholder="Your Name"
-        />
-        <label className="absolute left-0 -top-2.5 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base">
-          Name
-        </label>
-      </div>
+            <div className="space-y-6">
+              {/* Name */}
+              <div className="relative">
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="peer w-full bg-transparent border-b-2 border-gray-300 py-3 focus:border-blue-500 outline-none"
+                  placeholder="Name"
+                />
+                <label className="absolute left-0 -top-2.5 text-sm text-gray-500">
+                  Name
+                </label>
+              </div>
 
-      {/* Email Field */}
-      <div className="relative">
-        <input
-          type="email"
-          name="email"
-          required
-          value={formData.email}
-          onChange={handleChange}
-          className="peer w-full bg-transparent text-gray-900 border-b-2 border-gray-300 placeholder-transparent py-3 px-0 focus:border-indigo-500 focus:outline-none transition-all"
-          placeholder="Your Email"
-        />
-        <label className="absolute left-0 -top-2.5 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base">
-          Email
-        </label>
-      </div>
+              {/* Email */}
+              <div className="relative">
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="peer w-full bg-transparent border-b-2 border-gray-300 py-3 focus:border-indigo-500 outline-none"
+                  placeholder="Email"
+                />
+                <label className="absolute left-0 -top-2.5 text-sm text-gray-500">
+                  Email
+                </label>
+              </div>
 
-      {/* Message Field */}
-      <div className="relative">
-        <textarea
-          name="message"
-          rows={6}
-          required
-          value={formData.message}
-          onChange={handleChange}
-          className="peer w-full bg-transparent text-gray-900 border-b-2 border-gray-300 placeholder-transparent py-3 px-0 focus:border-pink-500 focus:outline-none transition-all resize-none"
-          placeholder="Your Message"
-        />
-        <label className="absolute left-0 -top-2.5 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base">
-          Message
-        </label>
-      </div>
-    </div>
+              {/* Message */}
+              <div className="relative">
+                <textarea
+                  name="message"
+                  rows={6}
+                  required
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="peer w-full bg-transparent border-b-2 border-gray-300 py-3 focus:border-pink-500 outline-none resize-none"
+                  placeholder="Message"
+                />
+                <label className="absolute left-0 -top-2.5 text-sm text-gray-500">
+                  Message
+                </label>
+              </div>
+            </div>
 
-    {/* Submit Button */}
-    <button
-      type="submit"
-      className="w-full py-3 rounded-xl font-bold text-white bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 shadow-lg hover:scale-105 transform transition-all"
-    >
-      Send Message
-    </button>
-  </form>
-</div>
+            {submitted && (
+              <p className="text-green-600 font-semibold text-center">
+                ✅ Thank you! We will contact you soon.
+              </p>
+            )}
 
+            <button
+              type="submit"
+              className="w-full py-3 rounded-xl font-bold text-white bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 shadow-lg hover:scale-105 transition"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   );
