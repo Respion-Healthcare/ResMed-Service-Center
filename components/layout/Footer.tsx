@@ -13,7 +13,7 @@ const FooterHero: React.FC = () => {
           </h2>
 
           <a
-  href="https://wa.me/917077720507?text=Hello%20Respion%20Healthcare%2C%20I%20need%20support%20for%20ResMed%20service."
+  href="https://wa.me/919438335165?text=Hello%20Respion%20Healthcare%2C%20I%20need%20support%20for%20ResMed%20service."
   target="_blank"
   rel="noopener noreferrer"
   className="flex items-center gap-3 bg-white text-black w-fit px-8 py-4 rounded-full font-semibold hover:scale-105 transition"
@@ -47,7 +47,7 @@ const FooterHero: React.FC = () => {
             {/* Contact */}
             <div>
               <p className="text-sm text-gray-400 mb-4">Contact Us</p>
-              <p className="text-lg mb-2">+91 7077720507</p>
+              <p className="text-lg mb-2">+91 9438335165</p>
               <p className="text-lg underline underline-offset-4">
             service@respion.in
               </p>
