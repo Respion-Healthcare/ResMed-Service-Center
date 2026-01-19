@@ -5,20 +5,26 @@ import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react'
 
 const testimonials = [
   {
-    name: "Sucheta Kargupta",
-    text: "Great purchase experience of AirSense 11 AutoSet with Respion Healthcare authorised service centre and quality demonstrate experience.",
+    name: "Rashmi Ranjan Rout",
+    text: "Support & response to customers are of high quality. My family member is using a BIPAP machine currently. So far, all good. They are maintaining professionalism with utmost care & dedication. Highly recommended for the service.",
     rating: 5
   },
   {
-    name: "Ronita Sarkar",
-    text: "The door step delivery service was very good. Mr. Biswarup has patiently demonstrated the whole process. Very satisfactory service.",
+    name: "Amresh Pal",
+    text: "Very good response and prompt service by staff.",
     rating: 5
   },
   {
-    name: "Gautam Ghosh",
-    text: "The service is very good. I have rented one CPAP machine for two months, being satisfied I bought a CPAP machine from them!",
+    name: "Ranjan Pradhan",
+    text: "Best BPAP mechanic service and Eco friendly and good prices each and everyone.",
+    rating: 5
+  },
+  {
+    name: "Tarakanta Patra",
+    text: "Very good service  and good behaviour respion team.",
     rating: 5
   }
+  
 ]
 
 export default function Testimonials() {

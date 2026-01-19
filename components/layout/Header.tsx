@@ -24,6 +24,8 @@ const navItems = [
 export default function Header() {
   const [showHeader, setShowHeader] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [mobileSubOpen, setMobileSubOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,12 +71,10 @@ export default function Header() {
             </p>
           </div>
 
-          {/* NAVIGATION */}
+          {/* DESKTOP NAV */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <div key={item.name} className="relative group">
-
-                {/* Parent link */}
                 <Link
                   href={item.href}
                   className="flex items-center gap-1 font-bold text-[17px] text-black hover:underline underline-offset-4"
@@ -83,50 +83,98 @@ export default function Header() {
                   {item.subItems && <ChevronDown size={16} />}
                 </Link>
 
-                {/* Dropdown */}
                 {item.subItems && (
-                  <div
-                    className="
-                      absolute top-full left-0 mt-2
-                      min-w-[220px]
-                      bg-white border border-gray-300 rounded-lg shadow-xl
-                      opacity-0 invisible
-                      group-hover:opacity-100 group-hover:visible
-                      transition-all duration-200
-                      z-50
-                    "
-                  >
+                  <div className="absolute top-full left-0 mt-2 min-w-[220px] bg-white border border-gray-300 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     {item.subItems.map((sub) => (
                       <Link
                         key={sub.name}
                         href={sub.href}
-                        className="
-                          block px-5 py-3
-                          text-sm font-semibold
-                          text-black
-                          hover:bg-gray-100
-                        "
+                        className="block px-5 py-3 text-sm font-semibold text-black hover:bg-gray-100"
                       >
                         {sub.name}
                       </Link>
                     ))}
                   </div>
                 )}
-
               </div>
             ))}
           </nav>
 
-          {/* SOCIAL */}
+          {/* DESKTOP SOCIAL */}
           <div className="hidden md:flex items-center gap-5 text-black">
-            <FaFacebookF className="hover:opacity-80 cursor-pointer" />
-            <FaLinkedinIn className="hover:opacity-80 cursor-pointer" />
-            <FaGoogle className="hover:opacity-80 cursor-pointer" />
-            <FaInstagram className="hover:opacity-80 cursor-pointer" />
+            <FaFacebookF />
+            <FaLinkedinIn />
+            <FaGoogle />
+            <FaInstagram />
           </div>
 
+          {/* HAMBURGER (MOBILE) */}
+          <button
+            className="md:hidden flex flex-col gap-1"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span className="w-6 h-[2px] bg-black" />
+            <span className="w-6 h-[2px] bg-black" />
+            <span className="w-6 h-[2px] bg-black" />
+          </button>
         </div>
       </div>
+
+      {/* MOBILE MENU */}
+      {menuOpen && (
+        <div className="md:hidden bg-white border-t px-6 py-6 space-y-4">
+
+          {navItems.map((item) => (
+            <div key={item.name}>
+              {!item.subItems ? (
+                <Link
+                  href={item.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="block font-bold text-black text-lg"
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <>
+                  <button
+                    onClick={() => setMobileSubOpen(!mobileSubOpen)}
+                    className="flex items-center justify-between w-full font-bold text-black text-lg"
+                  >
+                    {item.name}
+                    <ChevronDown
+                      size={18}
+                      className={`${mobileSubOpen ? 'rotate-180' : ''} transition`}
+                    />
+                  </button>
+
+                  {mobileSubOpen && (
+                    <div className="mt-3 ml-4 space-y-2">
+                      {item.subItems.map((sub) => (
+                        <Link
+                          key={sub.name}
+                          href={sub.href}
+                          onClick={() => setMenuOpen(false)}
+                          className="block text-black font-semibold"
+                        >
+                          {sub.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </>
+              )}
+            </div>
+          ))}
+
+          {/* MOBILE SOCIAL */}
+          <div className="flex gap-6 pt-4 text-black">
+            <FaFacebookF />
+            <FaLinkedinIn />
+            <FaGoogle />
+            <FaInstagram />
+          </div>
+        </div>
+      )}
     </header>
   )
 }

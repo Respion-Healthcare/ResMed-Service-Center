@@ -19,7 +19,7 @@ const servicesData = [
     title: "Repair & Maintenance",
     description:
       "Quick diagnosis and repair to ensure uninterrupted performance.",
-    image: "/images/service-2.jpg",
+    image: "/images/service-5.jpg",
   },
   {
     title: "Customer Support",

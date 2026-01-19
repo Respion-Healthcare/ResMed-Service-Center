@@ -12,12 +12,17 @@ const FooterHero: React.FC = () => {
             #1 ResMed Service <br /> Center in Odisha
           </h2>
 
-          <button className="flex items-center gap-3 bg-white text-black w-fit px-8 py-4 rounded-full font-semibold hover:scale-105 transition">
-            <span className="w-5 h-5 border border-black rounded-full flex items-center justify-center">
-              ⦿
-            </span>
-            Get Support
-          </button>
+          <a
+  href="https://wa.me/917077720507?text=Hello%20Respion%20Healthcare%2C%20I%20need%20support%20for%20ResMed%20service."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-3 bg-white text-black w-fit px-8 py-4 rounded-full font-semibold hover:scale-105 transition"
+>
+  <span className="w-5 h-5 border border-black rounded-full flex items-center justify-center">
+    ⦿
+  </span>
+  Get Support
+</a>
         </div>
 
         {/* RIGHT CONTENT */}
@@ -27,15 +32,17 @@ const FooterHero: React.FC = () => {
           <div className="grid grid-cols-2 gap-12">
 
             {/* Navigation */}
-            <div>
-              <p className="text-sm text-gray-400 mb-4">Navigation</p>
-              <Link
-                href="#"
-                className="text-lg underline underline-offset-4"
-              >
-                Google reviews
-              </Link>
-            </div>
+<div>
+  <p className="text-sm text-gray-400 mb-4">Navigation</p>
+    <Link
+    href="https://www.google.com/maps?cid=14393515399469563994"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-lg underline underline-offset-4 hover:text-gray-300 transition"
+  >
+    Google reviews
+  </Link>
+</div>
 
             {/* Contact */}
             <div>
