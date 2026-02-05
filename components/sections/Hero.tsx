@@ -11,16 +11,17 @@ export default function Hero() {
 
           {/* Left Content */}
           <div>
+            {/* ✅ ONE & ONLY H1 – SEO OPTIMIZED */}
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-              #1 Authorised ResMed <br />
-              Service Center & Dealer
+              Authorised ResMed Service Center & Dealer in Bhubaneswar
             </h1>
 
+            {/* ✅ Supporting SEO text */}
             <p className="text-lg text-white/90 mb-8 max-w-xl">
-              If you are looking for a trusted ResMed Service Center in Odisha,
-              West Bengal, this is the right place for you. We’re Respion
-              Healthcare — an Authorised ResMed Service Center and Sales Partner
-              in Odisha.
+              Looking for a trusted <strong>ResMed Service Center in Bhubaneswar</strong>?
+              We are Respion Healthcare, an <strong>authorised ResMed service center and sales partner</strong>
+              providing CPAP and BiPAP machines, servicing, repairs, masks and accessories
+              across Odisha and nearby regions.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -48,7 +49,7 @@ export default function Hero() {
           <div className="flex justify-center md:justify-end">
             <Image
               src="https://mlbdoiypvhyg.i.optimole.com/w:1080/h:1080/q:mauto/g:sm/f:best/ig:avif/dpr:2/https://resmedservicecenter.com/wp-content/uploads/2025/12/as1111.png"
-              alt="ResMed CPAP / BiPAP Device"
+              alt="ResMed CPAP and BiPAP machine authorised dealer in Bhubaneswar"
               width={520}
               height={300}
               priority

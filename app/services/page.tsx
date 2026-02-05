@@ -1,6 +1,28 @@
+import type { Metadata } from "next";
 import React from "react";
 import { CheckCircle } from "lucide-react";
 
+/* ============================
+   SEO METADATA (VERY IMPORTANT)
+============================ */
+export const metadata: Metadata = {
+  title:
+    "ResMed CPAP & BiPAP Service Center in Bhubaneswar | Installation, Repair & Support",
+  description:
+    "Authorized ResMed CPAP & BiPAP service center in Bhubaneswar offering installation, repair, maintenance, device training, sleep test assistance, and 24/7 customer support across Odisha.",
+  keywords: [
+    "ResMed service center Bhubaneswar",
+    "CPAP service center Bhubaneswar",
+    "BiPAP repair Bhubaneswar",
+    "ResMed authorized service Odisha",
+    "CPAP machine installation Bhubaneswar",
+    "BiPAP maintenance Bhubaneswar",
+  ],
+};
+
+/* ============================
+   SERVICES DATA
+============================ */
 interface Service {
   title: string;
   description: string;
@@ -44,6 +66,9 @@ const servicesData: Service[] = [
   },
 ];
 
+/* ============================
+   PAGE COMPONENT
+============================ */
 export default function ServicesPage() {
   return (
     <main className="bg-gray-50 text-gray-900">
@@ -51,11 +76,11 @@ export default function ServicesPage() {
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Our Services
+            ResMed CPAP & BiPAP Services in Bhubaneswar
           </h1>
           <p className="text-lg md:text-xl text-gray-200">
-            Comprehensive ResMed service solutions for CPAP, BiPAP, ventilators,
-            accessories, and sleep test support.
+            Authorized installation, repair, maintenance, and support for CPAP,
+            BiPAP, ventilators, accessories, and sleep test assistance.
           </p>
         </div>
       </section>
