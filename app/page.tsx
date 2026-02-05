@@ -6,17 +6,18 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title:
-    'Authorised ResMed Service Center in Bhubaneswar | CPAP & BiPAP Dealer',
+    'ResMed Service Center in Bhubaneswar | CPAP & BiPAP Sales & Support',
   description:
-    'Authorised ResMed service center and dealer in Bhubaneswar offering CPAP & BiPAP sales, professional servicing, repairs, masks and accessories. Call for genuine support.',
+    'Looking for a ResMed service center in Bhubaneswar? We provide CPAP & BiPAP sales, repairs, servicing, masks and accessories with genuine support. Call now.',
   keywords: [
-    'ResMed service center Bhubaneswar',
-    'Authorised ResMed dealer Bhubaneswar',
-    'CPAP machine service Bhubaneswar',
+    'ResMed service center in Bhubaneswar',
+    'ResMed CPAP service Bhubaneswar',
     'BiPAP service center Bhubaneswar',
-    'ResMed CPAP Bhubaneswar',
+    'Authorised ResMed dealer Bhubaneswar',
+    'CPAP machine repair Bhubaneswar',
   ],
 }
+
 
 export default function Home() {
   return (

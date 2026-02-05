@@ -11,21 +11,21 @@ export default function Hero() {
 
           {/* Left Content */}
           <div>
-            {/* ✅ ONE & ONLY H1 – SEO OPTIMIZED */}
+            {/* ONE & ONLY H1 - SEO OPTIMIZED */}
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-              Authorised ResMed Service Center & Dealer in Bhubaneswar
+              ResMed Service Center in Bhubaneswar - Authorised Dealer
             </h1>
 
-            {/* ✅ Supporting SEO text */}
+            {/* Supporting SEO text */}
             <p className="text-lg text-white/90 mb-8 max-w-xl">
-              Looking for a trusted <strong>ResMed Service Center in Bhubaneswar</strong>?
-              We are Respion Healthcare, an <strong>authorised ResMed service center and sales partner</strong>
-              providing CPAP and BiPAP machines, servicing, repairs, masks and accessories
-              across Odisha and nearby regions.
+              Looking for a trusted <strong>ResMed service center in Bhubaneswar</strong>?
+              We are Respion Healthcare, an authorised ResMed partner providing
+              CPAP and BiPAP machine sales, servicing, repairs, masks and accessories
+              across Bhubaneswar and nearby areas.
             </p>
 
+            {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
-              {/* WhatsApp Button */}
               <Link
                 href="https://wa.me/919937144165"
                 target="_blank"
@@ -35,7 +35,6 @@ export default function Hero() {
                 WhatsApp
               </Link>
 
-              {/* Call Button */}
               <Link
                 href="tel:+919937144165"
                 className="bg-white text-[#9E1B4F] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
@@ -53,7 +52,6 @@ export default function Hero() {
               width={520}
               height={300}
               priority
-              unoptimized
               className="object-contain"
             />
           </div>

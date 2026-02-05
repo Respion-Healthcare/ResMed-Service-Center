@@ -2,12 +2,11 @@
   "name": "resmed-service-center",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
+ "scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start"
+},
   "dependencies": {
     "framer-motion": "^12.24.0",
     "lucide-react": "^0.562.0",
