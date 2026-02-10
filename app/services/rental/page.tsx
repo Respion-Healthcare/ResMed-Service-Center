@@ -4,7 +4,7 @@ import { CheckCircle, Clock } from "lucide-react";
 
 export default function RentalProductsPage() {
   const whatsappLink =
-    "https://wa.me/919937144165?text=" +
+    "https://wa.me/9937000606?text=" +
     encodeURIComponent(
       "Hello, I need details about ResMed rental devices (CPAP / BiPAP / Ventilator)."
     );

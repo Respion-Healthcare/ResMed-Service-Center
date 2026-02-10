@@ -36,7 +36,7 @@ export default function SleepTestPage() {
     },
   ];
 
-  const whatsappBase = "https://wa.me/919937144165?text=";
+  const whatsappBase = "https://wa.me/9937000606?text=";
 
   return (
     <main className="bg-gray-50 text-gray-900">
@@ -82,7 +82,7 @@ export default function SleepTestPage() {
           {/* CTA */}
           <div className="text-center pt-8">
             <Link
-              href="https://wa.me/919937144165"
+              href="https://wa.me/9937000606"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-green-500 hover:bg-green-600

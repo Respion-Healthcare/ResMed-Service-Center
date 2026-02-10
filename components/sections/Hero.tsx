@@ -19,7 +19,7 @@ export default function Hero() {
             {/* Supporting SEO text */}
             <p className="text-lg text-white/90 mb-8 max-w-xl">
               Looking for a trusted <strong>ResMed service center in Bhubaneswar</strong>?
-              We are Respion Healthcare, an authorised ResMed partner providing
+              We are Respion Healthcare, an authorised ResMed partner, providing
               CPAP and BiPAP machine sales, servicing, repairs, masks and accessories
               across Bhubaneswar and nearby areas.
             </p>
@@ -27,7 +27,7 @@ export default function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
               <Link
-                href="https://wa.me/919937144165"
+                href="https://wa.me/9937000606"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-[#9E1B4F] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
@@ -36,7 +36,7 @@ export default function Hero() {
               </Link>
 
               <Link
-                href="tel:+919937144165"
+                href="tel:+9937000606"
                 className="bg-white text-[#9E1B4F] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
               >
                 Call

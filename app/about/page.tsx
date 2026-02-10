@@ -71,7 +71,7 @@ export default function AboutPage() {
           {/* CTA */}
           <div className="text-center pt-8">
             <a
-              href="https://wa.me/919937144165"
+              href="https://wa.me/9937000606"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-green-500 hover:bg-green-600
