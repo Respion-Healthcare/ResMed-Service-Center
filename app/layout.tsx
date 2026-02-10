@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   title: 'ResMed Authorised Service Center | Odisha',
   description:
     'Authorised ResMed Service Center for CPAP, BiPAP & Ventilators in Odisha',
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
 }
 
 export default function RootLayout({
@@ -22,6 +26,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+
+        {/* 🔹 Organization Logo Schema for Google */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "ResMed Authorised Service Center Odisha",
+              url: "https://resmedservicecenter.in",
+              logo: "https://resmedservicecenter.in/favicon.png",
+            }),
+          }}
+        />
 
         {/* Fixed Header */}
         <Header />
