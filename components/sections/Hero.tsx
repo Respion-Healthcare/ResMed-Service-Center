@@ -27,7 +27,7 @@ export default function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
               <Link
-                href="https://wa.me/9937000606"
+                href="https://wa.me/9937144165"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-[#9E1B4F] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
@@ -36,7 +36,7 @@ export default function Hero() {
               </Link>
 
               <Link
-                href="tel:+9937000606"
+                href="tel:+9937144165"
                 className="bg-white text-[#9E1B4F] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
               >
                 Call
