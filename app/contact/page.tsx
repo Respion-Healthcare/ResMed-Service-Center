@@ -42,7 +42,7 @@ export default function ContactPage() {
                 href="tel:+9937144165"
                 className="text-gray-700 hover:underline"
               >
-                +91 99370 00606
+                +91 9937144165
               </Link>
             </div>
           </div>
