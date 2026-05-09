@@ -6,8 +6,15 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
+        disallow: [
+          "/api/",
+          "/admin/",
+        ],
       },
     ],
+
     sitemap: "https://www.resmedservicecenter.in/sitemap.xml",
+
+    host: "https://www.resmedservicecenter.in",
   };
 }

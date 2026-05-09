@@ -1,6 +1,74 @@
 import React from "react";
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Sleep Test & Sleep Apnea Diagnosis Services in Bhubaneswar",
+
+  description:
+    "Professional sleep test services in Bhubaneswar including Polysomnography (PSG), Home Sleep Apnea Tests (HSAT), CPAP titration studies, and sleep disorder diagnosis across Odisha.",
+
+  keywords: [
+    "sleep test Bhubaneswar",
+    "sleep apnea diagnosis Odisha",
+    "Polysomnography Odisha",
+    "Home Sleep Apnea Test",
+    "CPAP titration study",
+    "narcolepsy testing",
+    "sleep study center Bhubaneswar",
+    "sleep disorder diagnosis",
+    "PSG test Odisha",
+    "HSAT test Bhubaneswar",
+  ],
+
+  alternates: {
+    canonical: "https://www.resmedservicecenter.in/sleep-test",
+  },
+
+  openGraph: {
+    title:
+      "Sleep Test & Sleep Apnea Diagnosis Services",
+
+    description:
+      "Book professional sleep studies including PSG, HSAT, and CPAP titration tests in Bhubaneswar.",
+
+    url: "https://www.resmedservicecenter.in/sleep-test",
+
+    siteName: "ResMed Service Center Odisha",
+
+    locale: "en_IN",
+
+    type: "website",
+
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Sleep Test Services Odisha",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title:
+      "Sleep Test & Sleep Apnea Diagnosis Services",
+
+    description:
+      "Professional sleep disorder diagnosis and sleep apnea testing services in Odisha.",
+
+    images: ["/og-image.jpg"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 interface TestService {
   name: string;

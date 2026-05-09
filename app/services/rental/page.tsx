@@ -1,6 +1,74 @@
 import React from "react";
 import Link from "next/link";
 import { CheckCircle, Clock } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "CPAP, BiPAP & Ventilator Rental Services in Bhubaneswar",
+
+  description:
+    "Rent ResMed CPAP, BiPAP, and ventilator devices in Bhubaneswar with professional setup, maintenance, and respiratory support services across Odisha.",
+
+  keywords: [
+    "CPAP rental Bhubaneswar",
+    "BiPAP rental Odisha",
+    "ventilator rental Bhubaneswar",
+    "ResMed rental services",
+    "CPAP machine on rent",
+    "BiPAP on rent Odisha",
+    "oxygen therapy devices",
+    "sleep apnea rental devices",
+    "respiratory equipment rental",
+    "home ventilator rental",
+  ],
+
+  alternates: {
+    canonical: "https://www.resmedservicecenter.in/rental",
+  },
+
+  openGraph: {
+    title:
+      "CPAP, BiPAP & Ventilator Rental Services",
+
+    description:
+      "Professional rental services for CPAP, BiPAP, ventilators, and respiratory devices across Odisha.",
+
+    url: "https://www.resmedservicecenter.in/rental",
+
+    siteName: "ResMed Service Center Odisha",
+
+    locale: "en_IN",
+
+    type: "website",
+
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "CPAP and BiPAP Rental Services Odisha",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title:
+      "CPAP, BiPAP & Ventilator Rental Services",
+
+    description:
+      "Rent CPAP, BiPAP, and ventilator devices with expert respiratory support in Odisha.",
+
+    images: ["/og-image.jpg"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function RentalProductsPage() {
   const whatsappLink =
