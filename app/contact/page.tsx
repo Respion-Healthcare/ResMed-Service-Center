@@ -78,8 +78,8 @@ export const metadata: Metadata = {
 const contactCards = [
   {
     title: "Call Support",
-    value: "+91 9937144165",
-    href: "tel:+919937144165",
+    value: "+91 9937000606",
+    href: "tel:+919937000606",
     icon: Phone,
     bg: "bg-[#9E1B4F]/10",
     iconColor: "text-[#9E1B4F]",
@@ -88,7 +88,7 @@ const contactCards = [
   {
     title: "WhatsApp",
     value: "Chat with our team",
-    href: "https://wa.me/919937144165",
+    href: "https://wa.me/919937000606",
     icon: MessageCircle,
     bg: "bg-[#9E1B4F]/10",
     iconColor: "text-[#9E1B4F]",
@@ -188,7 +188,7 @@ export default function ContactPage() {
               <div className="flex flex-wrap gap-4">
 
                 <Link
-                  href="https://wa.me/919937144165"
+                  href="https://wa.me/919937000606"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group bg-[#9E1B4F] text-white
@@ -208,7 +208,7 @@ export default function ContactPage() {
                 </Link>
 
                 <Link
-                  href="tel:+919937144165"
+                  href="tel:+919937000606"
                   className="bg-white border border-gray-200
                              hover:border-[#9E1B4F]
                              hover:text-[#9E1B4F]

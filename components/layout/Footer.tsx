@@ -59,7 +59,7 @@ const FooterHero: React.FC = () => {
             <div className="mt-6 flex flex-wrap gap-3">
 
               <a
-                href="https://wa.me/919438335165"
+                href="https://wa.me/919937000606"
                 target="_blank"
                 className="flex items-center gap-2 bg-[#9E1B4F] px-5 py-2.5 rounded-full text-sm font-semibold hover:scale-105 transition"
               >
@@ -68,7 +68,7 @@ const FooterHero: React.FC = () => {
               </a>
 
               <a
-                href="tel:+919937144165"
+                href="tel:+919937000606"
                 className="flex items-center gap-2 border border-white/20 px-5 py-2.5 rounded-full text-sm hover:bg-white/10 transition"
               >
                 <Phone size={16} />
@@ -89,13 +89,13 @@ const FooterHero: React.FC = () => {
 
             {/* PHONE */}
             <a
-              href="tel:+919937144165"
+              href="tel:+919937000606"
               className="flex items-center gap-3 mb-4 hover:text-[#9E1B4F] transition"
             >
               <Phone size={18} />
               <div>
                 <p className="text-xs text-gray-400">Phone</p>
-                <p className="text-sm font-semibold">+91 9937144165</p>
+                <p className="text-sm font-semibold">+91 9937000606</p>
               </div>
             </a>
 
@@ -149,7 +149,7 @@ const FooterHero: React.FC = () => {
                 <FaLinkedinIn />
               </a>
 
-              <a href="https://wa.me/919438335165" className="p-2 rounded-lg bg-white/5 hover:bg-[#9E1B4F] transition">
+              <a href="https://wa.me/919937000606" className="p-2 rounded-lg bg-white/5 hover:bg-[#9E1B4F] transition">
                 <FaWhatsapp />
               </a>
 

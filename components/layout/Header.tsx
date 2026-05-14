@@ -205,7 +205,7 @@ export default function Header() {
 
   {/* CALL BUTTON */}
   <Link
-    href="tel:+919937144165"
+    href="tel:+919937000606"
     className="px-6 py-3 rounded-full bg-[#9E1B4F] text-white font-semibold text-sm tracking-wide shadow-lg hover:scale-105 hover:bg-[#841543] transition-all duration-300"
   >
     Call Now
