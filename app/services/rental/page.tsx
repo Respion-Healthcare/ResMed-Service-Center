@@ -72,7 +72,7 @@ export const metadata: Metadata = {
 
 export default function RentalProductsPage() {
   const whatsappLink =
-    "https://wa.me/9937144165?text=" +
+    "https://wa.me/9937000606?text=" +
     encodeURIComponent(
       "Hello, I need details about ResMed rental devices (CPAP / BiPAP / Ventilator)."
     );

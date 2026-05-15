@@ -321,7 +321,7 @@ export default function Header() {
               <div className="mt-14">
 
                 <Link
-                  href="tel:+9937144165"
+                  href="tel:+9937000606"
                   className="w-full flex items-center justify-center py-4 rounded-full bg-[#9E1B4F] text-white text-lg font-semibold shadow-xl"
                 >
                   Call Now

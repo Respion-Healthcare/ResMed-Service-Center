@@ -54,7 +54,7 @@ export default function TutorialsPage() {
     },
   ]
 
-  const whatsappBase = "https://wa.me/9937144165?text="
+  const whatsappBase = "https://wa.me/9937000606?text="
 
   return (
     <main className="bg-gradient-to-b from-[#fff5f8] via-white to-[#fdf2f7] text-gray-900">
@@ -145,7 +145,7 @@ export default function TutorialsPage() {
           <div className="text-center pt-8">
 
             <Link
-              href="https://wa.me/9937144165"
+              href="https://wa.me/9937000606"
               target="_blank"
               className="inline-flex items-center gap-2 bg-[#9E1B4F] hover:bg-[#861645] text-white px-10 py-4 rounded-full font-semibold shadow-lg hover:scale-105 transition-all"
             >

@@ -63,7 +63,7 @@ export default function Hero() {
             <div className="flex flex-wrap gap-5">
 
               <Link
-                href="https://wa.me/9937144165"
+                href="https://wa.me/9937000606"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group px-10 py-4 rounded-full bg-white text-[#9E1B4F] text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl"
@@ -74,7 +74,7 @@ export default function Hero() {
               </Link>
 
               <Link
-                href="tel:+9937144165"
+                href="tel:+9937000606"
                 className="px-10 py-4 rounded-full border border-white/40 bg-white/10 backdrop-blur-md text-white text-lg font-semibold transition-all duration-300 hover:bg-white hover:text-[#9E1B4F] hover:scale-105"
               >
                 Call Now
