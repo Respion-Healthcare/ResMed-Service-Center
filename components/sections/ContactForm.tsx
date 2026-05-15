@@ -155,7 +155,7 @@ const ContactSection: React.FC = () => {
                   </p>
 
                   <p className="text-base font-semibold text-gray-900">
-                    support@respionhealthcare.com
+                    support@respion.in
                   </p>
                 </div>
               </div>

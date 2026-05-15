@@ -101,13 +101,13 @@ const FooterHero: React.FC = () => {
 
             {/* EMAIL */}
             <a
-              href="mailto:service@respion.in"
+              href="mailto:support@respion.in"
               className="flex items-center gap-3 mb-4 hover:text-[#9E1B4F] transition"
             >
               <Mail size={18} />
               <div>
                 <p className="text-xs text-gray-400">Email</p>
-                <p className="text-sm font-semibold">service@respion.in</p>
+                <p className="text-sm font-semibold">support@respion.in</p>
               </div>
             </a>
 
