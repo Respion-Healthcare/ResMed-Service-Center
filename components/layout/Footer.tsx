@@ -49,7 +49,7 @@ const FooterHero: React.FC = () => {
               <p className="text-sm text-gray-400 mb-4">Contact Us</p>
               <p className="text-lg mb-2">+91 99370 00606</p>
               <p className="text-lg underline underline-offset-4">
-            service@respion.in
+            resmedservicecenter@gmail.com
               </p>
             </div>
           </div>
