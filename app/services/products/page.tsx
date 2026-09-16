@@ -1,7 +1,74 @@
 import React from "react";
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title:
+    "ResMed CPAP, BiPAP & Oxygen Concentrator Products | Bhubaneswar",
+
+  description:
+    "Explore ResMed CPAP machines, BiPAP devices, oxygen concentrators, masks, and respiratory accessories in Bhubaneswar with professional support across Odisha.",
+
+  keywords: [
+    "ResMed CPAP products",
+    "BiPAP machine Bhubaneswar",
+    "oxygen concentrator Odisha",
+    "ResMed AirSense 10",
+    "ResMed AirSense 11",
+    "AirCurve 10 VAuto",
+    "CPAP masks Odisha",
+    "sleep apnea devices",
+    "respiratory products Bhubaneswar",
+    "CPAP accessories",
+  ],
+
+  alternates: {
+    canonical: "https://www.resmedservicecenter.in/products",
+  },
+
+  openGraph: {
+    title:
+      "ResMed CPAP, BiPAP & Oxygen Concentrator Products",
+
+    description:
+      "Browse CPAP, BiPAP, oxygen concentrators, masks, and respiratory care products with support across Odisha.",
+
+    url: "https://www.resmedservicecenter.in/products",
+
+    siteName: "ResMed Service Center Odisha",
+
+    locale: "en_IN",
+
+    type: "website",
+
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ResMed Respiratory Products Odisha",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title:
+      "ResMed CPAP, BiPAP & Oxygen Concentrator Products",
+
+    description:
+      "Professional respiratory care products including CPAP, BiPAP, masks, and oxygen concentrators.",
+
+    images: ["/og-image.jpg"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 interface Product {
   name: string;
   description: string;
